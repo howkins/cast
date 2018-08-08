@@ -9,8 +9,8 @@ interface Cast
 	public function _string($value = null);
 	public function _int($value = null);
 	public function _integer($value = null);
-	public function _bool($value = null);
-	public function _boolean($value = null);
+	public function _bool($value = null, $strict = 0);
+	public function _boolean($value = null, $strict = 0);
 	public function _arr($value = null);
 	public function _array($value = null);
 	public function _obj($value = null);

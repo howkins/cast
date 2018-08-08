@@ -37,13 +37,16 @@ class CastBuilder implements Cast
 		return $value;
 	}
 	
-	public function _bool($value = null)
+	public function _bool($value = null, $strict = 0)
 	{
-		return $this->_boolean($value);
+		return $this->_boolean($value, $strict);
 	}
 	
-	public function _boolean($value = null)
+	public function _boolean($value = null, $strict = 0)
 	{
+		if(!$strict && (strtolower($value) === "false" || strtolower($value) === "0.0")){
+			$value = false;
+		}
 		$this->settype($value, 'boolean');
 		return $value;
 	}

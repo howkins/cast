@@ -26,7 +26,11 @@ Can be usage and contract in follow namespace `Howkins\Cast\Contracts\Cast`
 
 `Cast::_int()` or `Cast::_integer()`
 
-`Cast::_bool()` or `Cast::_boolean()`
+`Cast::_bool()` or `Cast::_boolean()`  
+```php
+Cast::_bool('false', $strict = 0); // print bool(false) if strict is 1 will return bool(true)
+Cast::_bool('0.0', $strict = 0); // print bool(false) if strict is 1 will return bool(true)
+```
 
 `Cast::_arr()` or `Cast::_array()`
 
