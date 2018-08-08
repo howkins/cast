@@ -1,0 +1,29 @@
+{
+    "name": "howkins/cast",
+    "description": "Cast variables",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Georgi Zhelezov",
+            "email": "howkinss@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Howkins\\Cast\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Howkins\\Cast\\Providers\\CastServiceProvider"
+            ],
+            "aliases": {
+                "Cast": "Howkins\\Cast\\Facades\\Cast"
+            }
+        }
+    }
+}
