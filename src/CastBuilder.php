@@ -22,6 +22,9 @@ class CastBuilder implements Cast
 	
 	public function _string($value = null)
 	{
+		if(is_array($value) || is_object($value)){
+			$value = $this->_int( $value );
+		}
 		$this->settype($value, 'string');
 		return $value;
 	}
@@ -33,6 +36,9 @@ class CastBuilder implements Cast
 	
 	public function _integer($value = null)
 	{
+		if(is_object($value)){
+			$value = $this->_array($value);
+		}
 		$this->settype($value, 'integer');
 		return $value;
 	}
@@ -44,8 +50,10 @@ class CastBuilder implements Cast
 	
 	public function _boolean($value = null, $strict = 0)
 	{
-		if(!$strict && (strtolower($value) === "false" || strtolower($value) === "0.0")){
+		if( !$strict && is_string($value) && ( strtolower($value) === "false" || strtolower($value) === "0.0" ) ){
 			$value = false;
+		}elseif(!$strict && is_object($value)){
+			$value = $this->_array($value);
 		}
 		$this->settype($value, 'boolean');
 		return $value;
@@ -81,14 +89,16 @@ class CastBuilder implements Cast
 	
 	public function _float($value = null)
 	{
+		if(is_array($value) || is_object($value)){
+			$value = $this->_int( $value );
+		}
 		$this->settype($value, 'float');
 		return $value;
 	}
 	
 	public function _double($value = null)
 	{
-		$this->settype($value, 'double');
-		return $value;
+		return $this->_float($value);
 	}
 	
 }
