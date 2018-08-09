@@ -1,5 +1,6 @@
 # Cast
-Laravel cast variables
+
+[![Packagist](https://img.shields.io/packagist/dt/howkins/cast.svg)](https://packagist.org/packages/howkins/cast)
 
 # Instalation
 
