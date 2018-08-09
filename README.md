@@ -7,6 +7,10 @@
 
 # Instalation
 
+```
+composer require howkins/cast
+```
+
 If Laravel version is less than 5.5 is need to include manually in `config/app.php`  
 
 Service provider
