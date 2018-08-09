@@ -1,6 +1,9 @@
 # Cast
 
 [![Packagist](https://img.shields.io/packagist/dt/howkins/cast.svg)](https://packagist.org/packages/howkins/cast)
+[![Packagist](https://img.shields.io/packagist/l/howkins/cast.svg)](https://packagist.org/packages/howkins/cast)
+[![Packagist](https://img.shields.io/packagist/v/howkins/cast.svg)](https://packagist.org/packages/howkins/cast)
+
 
 # Instalation
 
